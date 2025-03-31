@@ -60,14 +60,23 @@ A aplicação estará disponível em `http://localhost:5173/`.
   │   ├── BookList.jsx
   │   ├── BookForm.jsx
   │   ├── EditBook.jsx
+  │   ├── NavBar.jsx.jsx
   │
   ├── contexts
   │   ├── BookContext.jsx
-  │
+  ├
   ├── pages
   │   ├── Home.jsx
   │   ├── Cadastro.jsx
-  │   ├── EditarLivro.jsx
+  │   ├── Editar.jsx
+  │   ├── ListaDeLivros.jsx
+  │   ├── Sobre.jsx
+  │
+  ├── screenshots
+  │   ├── cadastro.png
+  │   ├── home.png
+  │   ├── listaDeLivros.png
+  │   ├── sobre.png
   │
   ├── App.jsx
   ├── main.jsx
