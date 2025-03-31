@@ -1,8 +1,10 @@
 # 📚 Gerenciador de Livros
 
-Este projeto é um gerenciador de livros desenvolvido em React, permitindo adicionar, editar e excluir livros de uma lista. Os dados são armazenados no `localStorage` para persistência entre sessões.
+Este projeto é uma aplicação React que se integra a uma API REST para o gerenciamento de livros. Ele permite adicionar, editar, listar e remover livros, utilizando uma API baseada em um arquivo JSON para persistência dos dados.
 
 ## 🛠 Tecnologias Utilizadas
+
+Frontend:
 
 - React.js
 - React Router
@@ -10,6 +12,22 @@ Este projeto é um gerenciador de livros desenvolvido em React, permitindo adici
 - LocalStorage
 - CSS
 - Vite
+- Axios
+- Material-UI (MUI)
+
+Backend:
+
+- Node.js
+- Express
+- JSON como banco de dados
+
+## ⚙️ Funcionalidades
+
+- Listagem de livros
+- Adição de novos livros
+- Edição de livros existentes
+- Exclusão de livros
+- Persistência dos dados via API
 
 ## 📷 Capturas de Tela
 
@@ -20,24 +38,44 @@ Este projeto é um gerenciador de livros desenvolvido em React, permitindo adici
 
 ## 🎥 Demonstração em Vídeo
 
-[🎬 Ver vídeo demonstração](https://www.loom.com/share/b2f0c00fac34405bb194e0dc380b6a55?sid=822b503c-698a-4d6a-9e29-17291415498f)
+[🎬 Ver vídeo demonstração](https://www.loom.com/share/0b36938dfdf34ddd90e55a1e6e0cc692?sid=87aaebb8-983e-4607-9c19-4d803870a876)
 
 ## 🚀 Como Executar o Projeto
 
-### 1️⃣ Clone o repositório
+### 💻 1. Configurar e Iniciar o Backend
+
+1. Clone o repositório da API:
+
+```sh
+  git clone https://github.com/adsPucrsOnline/DesenvolvimentoFrontend/
+```
+
+2. Entre na pasta da API:
+   ```sh
+   Utilizando o mesmo terminal, entre na pasta da API: cd ./DesenvolvimentoFrontend/readingJournal-api/
+   ```
+3. Inicie o servidor:
+   ```sh
+   npm install e em seguida npm start
+   ```
+4. A API estará rodando em `http://localhost:5000`.
+
+### 🌐 2. Configurar e Iniciar o Frontend
+
+1.  Clone o repositório
 
 ```sh
  git clone https://github.com/vitoriadalri/crud-livros.git
- cd seu-repositorio
+ cd crud-livros
 ```
 
-### 2️⃣ Instale as dependências
+2. Instale as dependências
 
 ```sh
  npm install
 ```
 
-### 3️⃣ Inicie o servidor de desenvolvimento
+3. Inicie o servidor de desenvolvimento
 
 ```sh
  npm run dev
@@ -52,6 +90,16 @@ A aplicação estará disponível em `http://localhost:5173/`.
 ✅ Excluir livros da lista.
 ✅ Armazenamento persistente utilizando `localStorage`.
 
+## 🔄 Integração com a API
+
+O frontend consome a API via **Axios**. As principais requisições feitas são:
+
+- **Listar livros:** `GET http://localhost:5000/books`
+- **Buscar livro por ID:** `GET http://localhost:5000/books/:id`
+- **Criar livro:** `POST http://localhost:5000/books`
+- **Editar livro:** `PUT http://localhost:5000/books/:id`
+- **Remover livro:** `DELETE http://localhost:5000/books/:id`
+
 ## 📂 Estrutura do Projeto
 
 ```
@@ -60,7 +108,6 @@ A aplicação estará disponível em `http://localhost:5173/`.
   │   ├── BookList.jsx
   │   ├── BookForm.jsx
   │   ├── EditBook.jsx
-  │   ├── NavBar.jsx.jsx
   │
   ├── contexts
   │   ├── BookContext.jsx
@@ -68,19 +115,11 @@ A aplicação estará disponível em `http://localhost:5173/`.
   ├── pages
   │   ├── Home.jsx
   │   ├── Cadastro.jsx
-  │   ├── Editar.jsx
-  │   ├── ListaDeLivros.jsx
-  │   ├── Sobre.jsx
-  │
-  ├── screenshots
-  │   ├── cadastro.png
-  │   ├── home.png
-  │   ├── listaDeLivros.png
-  │   ├── sobre.png
+  │   ├── EditarLivro.jsx
   │
   ├── App.jsx
   ├── main.jsx
-  ├── styles.css
+  ├── index.css
 ```
 
 ### Conclusão

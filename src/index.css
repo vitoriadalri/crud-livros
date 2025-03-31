@@ -181,22 +181,3 @@ body {
   color: white;
 }
 
-.botao-editar, .botao-excluir {
-  margin-left: 0.6rem;
-  margin-right: 0.6rem;
-  background-color: #bbbbdb;
-  font-size: 2rem;
-  text-decoration: none;
-  border-radius: 3rem;
-  font-size: 2rem;
-  padding: 0.6rem;
-  color: #050535;
-  box-shadow: 0 0.21rem 0.8rem rgba(0, 0, 0, 0.15);
-  border-bottom: solid 0.4rem #050535;
-  border-right: solid 0.4rem #050535;
-}
-
-.botao-editar:hover, .botao-excluir:hover{
-  border: solid 0.2rem #bbbbdb;
-  color: white;
-}
