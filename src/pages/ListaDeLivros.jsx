@@ -1,10 +1,14 @@
-import React from "react";
-import { useContext } from "react";
-import { BookContext } from "../components/BookList";
+import React, { useContext } from "react";
+import { BookContext } from "../contexts/BookContext";
 import { Link } from "react-router-dom";
 
 const BookList = () => {
-  const { books } = useContext(BookContext); // Obtém a lista de livros do contexto
+  const { books, setBooks } = useContext(BookContext); 
+
+  const handleDelete = (index) => {
+    const updatedBooks = books.filter((_, i) => i !== index);
+    setBooks(updatedBooks);
+  };
 
   return (
     <div>
@@ -12,10 +16,12 @@ const BookList = () => {
       {books.length === 0 ? (
         <p className="informacoes-secundarias">Nenhum livro cadastrado.</p>
       ) : (
-        <ul className="lista" >
+        <ul className="lista">
           {books.map((book, index) => (
             <li key={index}>
               <strong>{book.title}</strong> - {book.author} ({book.genre}) - {book.date}
+              <Link to={`/editar/${index}`} className="botao-editar">Editar</Link>
+              <button onClick={() => handleDelete(index)} className="botao-excluir">Excluir</button>
             </li>
           ))}
         </ul>

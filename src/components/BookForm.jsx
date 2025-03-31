@@ -1,9 +1,9 @@
 import { useState, useContext } from "react";
-import { BookContext } from "./BookList"; // Importa o contexto
+import { BookContext } from "../contexts/BookContext";
 import { Link } from "react-router-dom";
 
 const BookForm = () => {
-  const { addBook } = useContext(BookContext); // Usa a função addBook do contexto
+  const { addBook } = useContext(BookContext); 
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [genre, setGenre] = useState("");
@@ -14,13 +14,10 @@ const BookForm = () => {
     e.preventDefault();
     if (!title || !author || !genre || !date) return;
 
-    // Cria um novo livro com os dados preenchidos
     const newBook = { title, author, genre, date };
     
-    addBook(newBook); // Adiciona o livro ao contexto
-    setBookAdded(true); // Exibe a mensagem de sucesso
-
-    // Limpa os campos do formulário
+    addBook(newBook); 
+    setBookAdded(true); 
     setTitle("");
     setAuthor("");
     setGenre("");
