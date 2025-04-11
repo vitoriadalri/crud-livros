@@ -162,7 +162,7 @@ O frontend consome a API via **Axios**. As principais requisições feitas são:
   ├── services
   │   ├── api.js
   |
-  ├── screenshots
+  ├── tests
   │   ├── BookContext.test.jsx
   │   ├── BookForm.test.jsx
   │   ├── BookList.test.jsx
