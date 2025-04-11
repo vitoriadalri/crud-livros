@@ -33,7 +33,7 @@ const BookList = () => {
       ) : (
         <Grid container spacing={3} justifyContent="center">
           {books.map((book) => (
-            <Grid item key={book.id} xs={12} sm={6} md={4} lg={3}>
+            <Grid key={book.id} sx={{ width: { xs: "100%", sm: "50%", md: "33.33%", lg: "25%" } }}>
               <Card sx={{ minWidth: 275, padding: 2, position: "relative" }}>
                 <CardContent>
                   <Typography variant="h6">{book.title}</Typography>

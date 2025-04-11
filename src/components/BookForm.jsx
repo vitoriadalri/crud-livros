@@ -29,23 +29,23 @@ const BookForm = () => {
       <h2 className="titulo-principal titulo-cadastro">Cadastrar</h2>
       <form className="formulario" onSubmit={handleSubmit}>
         <div>
-          <label className="label-cadastro"> Título: </label>
-          <input className="input-cadastro" type="text" value={title} onChange={(e) => setTitle(e.target.value)} required />
+          <label className="label-cadastro" htmlFor="titulo"> Título: </label>
+          <input className="input-cadastro" id="titulo" type="text" value={title} onChange={(e) => setTitle(e.target.value)} required />
         </div>
         <br />
         <div >
-          <label className="label-cadastro"> Autor: </label>
-          <input className="input-cadastro" type="text" value={author} onChange={(e) => setAuthor(e.target.value)} required />
+          <label className="label-cadastro" htmlFor="autor"> Autor: </label>
+          <input className="input-cadastro" id="autor" type="text" value={author} onChange={(e) => setAuthor(e.target.value)} required />
         </div>
         <br />
         <div>
-          <label className="label-cadastro"> Gênero: </label>
-          <input className="input-cadastro" type="text" value={genre} onChange={(e) => setGenre(e.target.value)} required />
+          <label className="label-cadastro" htmlFor="genero"> Gênero: </label>
+          <input className="input-cadastro" id="genero" type="text" value={genre} onChange={(e) => setGenre(e.target.value)} required />
         </div>
         <br />
         <div>
-          <label className="label-cadastro"> Data: </label>
-          <input className="input-cadastro" type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
+          <label className="label-cadastro" htmlFor="data"> Data: </label>
+          <input className="input-cadastro" id="data" type="date" value={date} onChange={(e) => setDate(e.target.value)} required />
         </div>
         <br />
         <button className="botao botao-cadastro" type="submit">Adicionar</button>

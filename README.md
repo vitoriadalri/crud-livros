@@ -14,6 +14,8 @@ Frontend:
 - Vite
 - Axios
 - Material-UI (MUI)
+- Vitest (testes)
+- Testing Library (renderização e interação nos testes)
 
 Backend:
 
@@ -83,6 +85,37 @@ Backend:
 
 A aplicação estará disponível em `http://localhost:5173/`.
 
+## 🧪 Testes
+
+### 🌐 3. Configurar e Iniciar os Testes
+
+1. Certifique-se de que todas as dependências estão instaladas:
+
+```sh
+ npm install
+```
+
+2. Mude para a pasta 'src':
+
+```sh
+ cd src
+```
+
+3. Execute os testes com o comando:
+
+```sh
+ npx vitest
+```
+
+### 🔍 O que está sendo testado?
+
+- **BookContext** – Adição e remoção de livros, integração com o `localStorage`.
+- **BookForm** – Renderização do formulário e manipulação de entrada de dados.
+- **EditBook** – Edição de livros com envio de dados atualizados.
+- **BookList** – Renderização da lista de livros.
+- **Rotas** – Validação das rotas principais com renderização correta das páginas.
+- **NavBar, Home, Sobre, Cadastro, EditarLivro** – Testes básicos de renderização.
+
 ## 🔧 Funcionalidades
 
 ✅ Adicionar livros com título, autor, gênero e data de publicação.
@@ -97,7 +130,7 @@ O frontend consome a API via **Axios**. As principais requisições feitas são:
 - **Listar livros:** `GET http://localhost:5000/books`
 - **Buscar livro por ID:** `GET http://localhost:5000/books/:id`
 - **Criar livro:** `POST http://localhost:5000/books`
-- **Editar livro:** `PUT http://localhost:5000/books/:id`
+- **Atualizar dados de um livro:** `PUT http://localhost:5000/books/:id`
 - **Remover livro:** `DELETE http://localhost:5000/books/:id`
 
 ## 📂 Estrutura do Projeto
@@ -116,6 +149,33 @@ O frontend consome a API via **Axios**. As principais requisições feitas são:
   │   ├── Home.jsx
   │   ├── Cadastro.jsx
   │   ├── EditarLivro.jsx
+  │
+  ├── routes
+  │   ├── Routes.jsx
+  ├
+  ├── screenshots
+  │   ├── cadastro.png
+  │   ├── home.png
+  │   ├── listaDeLivros.png
+  │   ├── sobre.png
+  |
+  ├── services
+  │   ├── api.js
+  |
+  ├── screenshots
+  │   ├── BookContext.test.jsx
+  │   ├── BookForm.test.jsx
+  │   ├── BookList.test.jsx
+  │   ├── Cadastro.test.jsx
+  │   ├── Editar.test.jsx
+  │   ├── EditBook.test.jsx
+  │   ├── Home.test.jsx
+  │   ├── ListaDeLivros.test.jsx
+  │   ├── NavBar.test.jsx
+  │   ├── Routes.test.jsx
+  │   ├── Sobre.test.jsx
+  │   ├── setupTests.js
+  │
   │
   ├── App.jsx
   ├── main.jsx
