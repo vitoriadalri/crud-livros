@@ -31,10 +31,10 @@ Backend:
 
 ## 📷 Capturas de Tela
 
-![Home](./screenshots/home.png)
-![Sobre](./screenshots/sobre.png)
-![Lista de Livros](./screenshots/listaDeLivros.png)
-![Cadastro](./screenshots/cadastro.png)
+![Home](./src/screenshots/home.png)
+![Sobre](./src/screenshots/sobre.png)
+![Lista de Livros](./src/screenshots/listaDeLivros.png)
+![Cadastro](./src/screenshots/cadastro.png)
 
 ## 🎥 Demonstração em Vídeo
 
